@@ -1,18 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Flipzygame hard level is a tough memory card game to challenge your brain. Match pairs before the timer runs out!">
     <link rel="stylesheet" href="../mg-css/main.css">
-    <link rel="stylesheet" href="../mg-css/hard.css">
     <link rel="stylesheet" href="../app-css/btns.css">
     <title>Flipzygame - Hard level | Memory Card Game</title>
 </head>
-
 <body>
+    <style>
+        .game-board {
+            display: grid;
+            grid-template-columns: repeat(6, 120px);
+            gap: 15px;
+            margin-top: 65px;
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 450px) {
+            .game-board {
+                display: grid !important;
+                grid-template-columns: repeat(4, 1fr) !important;
+                gap: 5px;
+                justify-content: center;
+                align-items: center;
+                max-width: 100%;
+                margin-top: 100px;
+                margin-bottom: 60px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .game-board {
+                grid-template-columns: repeat(6, 80px);
+                gap: 10px;
+                margin-top: 100px;
+            }
+        }
+    </style>
     <div class="container">
 
         <div class="header-ad-slot">
@@ -35,7 +62,6 @@
             </svg>
             Back
         </button>
-
         <button class="restart-button" onclick="restartGame()">Restart 🔄</button>
     </div>
 
@@ -58,5 +84,4 @@
     <script src="../app-js/btns.js"></script>
 
 </body>
-
 </html>
