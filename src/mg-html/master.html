@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Flipzygame Master Level - Test your ultimate memory skills with the hardest mode in our memory game. Time challenge: 180 seconds!">
+    <link rel="stylesheet" href="../mg-css/main.css">
+    <link rel="stylesheet" href="../mg-css/master.css">
+    <link rel="stylesheet" href="../app-css/btns.css">
+    <title>Flipzygame - Master Level Memory Challenge</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header-ad-slot">
+            AD AREA (height : 55px)
+        </div>
+
+        <div id="timerDisplay">Time: 180 s</div>
+        <div id="resultDisplay" style="display: none;"></div>
+        <div class="game-board" id="gameBoard"></div>
+
+        <div id="adBox">
+            <button id="closeAdButton" class="close-ad-btn">X</button>
+            <div class="adinbox"></div>
+        </div>
+
+        <button class="back-button" onclick="goBack()" aria-label="Go back to previous page">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+            Back
+        </button>
+
+        <button class="restart-button" onclick="restartGame()">Restart 🔄</button>
+
+    </div>
+
+    <script>
+        const images = ['⚒️', '⌛️', '🚒', '🍣', '🌻', '🐞', '😸', '😰', '😎', '😃', '✈️', '🚕', '🤓', '🩺', '🧪', '💐', '🙈', '😜', '🎃', '🤖', '🥶', '⚒️', '⌛️', '🚒', '🍣', '🌻', '🐞', '😸', '😰', '😎', '😃', '✈️', '🚕', '🤓', '🩺', '🧪', '💐', '🙈', '😜', '🎃', '🤖', '🥶'];
+        let timeLeft = 120;
+        let timer;
+        function resetGame() {
+            matchedCards = 0;
+            selectedCards = [];
+            timeLeft = 40;
+            document.getElementById("timerDisplay").innerText = `Time: ${timeLeft} s`;
+            shuffledImages = images.sort(() => Math.random() - 0.5);
+            createCards();
+            startTimer();
+        }
+    </script>
+
+    <script src="../mg-js/main.js"></script>
+    <script src="../app-js/btns.js"></script>
+
+</body>
+
+</html>

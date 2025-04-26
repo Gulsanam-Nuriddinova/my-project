@@ -1,0 +1,28 @@
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(6, 120px);
+    gap: 15px;
+    margin-top: 65px;
+    margin-bottom: 60px;
+}
+
+@media (max-width: 450px) {
+    .game-board {
+        display: grid !important; 
+        grid-template-columns: repeat(4, 1fr) !important; 
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%; 
+        margin-top: 100px;
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width: 900px) {
+    .game-board {
+        grid-template-columns: repeat(6, 80px);
+        gap: 10px;
+        margin-top: 100px;
+    }
+}
