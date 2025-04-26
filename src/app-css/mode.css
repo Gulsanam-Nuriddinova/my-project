@@ -28,7 +28,7 @@
 }
 
 h3 {
-    font-size: 34px;
+    font-size: 32px;
     animation: textPop 2s infinite ease-in-out;
     margin-bottom: 40px;
     color: #78350f;
@@ -123,7 +123,6 @@ h3 {
     }
 
     .mode-list-item h4 {
-        font-size: 18px;
-        padding: 12px 25px;
+        font-size: 16px;
     }
 }
