@@ -28,9 +28,9 @@
 }
 
 h3 {
-    font-size: 32px;
+    font-size: 30px;
     animation: textPop 2s infinite ease-in-out;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     color: #78350f;
 }
 

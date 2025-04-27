@@ -7,6 +7,10 @@ body {
     position: relative;
 }
 
+.container{
+    margin-bottom: 70px;
+}
+
 .about {
     max-width: 800px;
     margin: 40px auto;
