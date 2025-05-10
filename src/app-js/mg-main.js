@@ -42,7 +42,7 @@ function endGame(isWin) {
     resultDisplay.style.display = "block";
     const adBox = document.getElementById("adBox");
     adBox.style.display = "block";
-    let countdown = 4;
+    let countdown = 3;
     const countdownInterval = setInterval(() => {
         if (countdown > 0) {
             countdown--;}
@@ -51,7 +51,7 @@ function endGame(isWin) {
             adBox.style.display = "none"; 
             resetGame(); }}, 1000);
     setTimeout(() => {
-        resultDisplay.style.display = "none";}, 4000);}
+        resultDisplay.style.display = "none";}, 3000);}
 function checkMatch() {
     if (selectedCards[0].dataset.image === selectedCards[1].dataset.image) {
         selectedCards.forEach(card => card.classList.add('matched'));
